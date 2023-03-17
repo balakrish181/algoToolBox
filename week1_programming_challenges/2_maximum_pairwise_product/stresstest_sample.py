@@ -1,7 +1,8 @@
 import random
 
-def max_product_fast(values):
+def max_product_fast(data):
     #n = int(input())
+    values = data.copy()
     n = len(values)
     #values = list(map(int,input().split()))
     max1,max2,index = 0,0,0
@@ -30,7 +31,7 @@ def max_product_slow(values):
 
 
 def stressTest(N,M):
-    for i in range(5):
+    while True:
         set=[]
         n = random.randint(2,N)
         for i in range(n):
@@ -51,7 +52,7 @@ def stressTest(N,M):
 
 
 if __name__=='__main__':
-    stressTest(5,10)
+    stressTest(20,1000000)
 
 
 
