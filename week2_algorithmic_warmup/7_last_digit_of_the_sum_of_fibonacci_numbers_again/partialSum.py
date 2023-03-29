@@ -1,4 +1,4 @@
-def fibonacci(n):
+def fibonacci(m, n):
     a,b=0,1
 
     if n<=0:
@@ -11,4 +11,5 @@ def fibonacci(n):
     
 
 if __name__ == '__main__':
-    print(fibonacci(int(input())))
+    m,n map(int, input.split())
+    print(fibonacci(m,n)

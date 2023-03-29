@@ -1,10 +1,11 @@
 def fibonacci(n):
-    values = [1,1]
-    for i in range(2,n):
-        values.append(values[i-1] + values[i-2])
-        
-
-    return values[n-1]
+    if n<=0:
+        return 0
+    else: 
+        a,b=0,1
+        for i in range(2,n+1):
+            a,b = b, a+b 
+        return b
 
 if __name__ == '__main__':
     print(fibonacci(int(input())))

@@ -2,13 +2,12 @@ def fibonacci_sum(n):
     if n <= 1:
         return n
 
-    previous, current, _sum = 0, 1, 1
+    previous, current,  = 0, 1
 
     for _ in range(n - 1):
-        previous, current = current, previous + current
-        _sum += current
-
-    return _sum % 10
+        previous, current = current, (previous + current)%10
+    
+    return current
 
 
 if __name__ == '__main__':
